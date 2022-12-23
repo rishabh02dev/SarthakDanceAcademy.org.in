@@ -1,0 +1,26 @@
+extends base.pug 
+
+block scripts 
+    script(src = '/static/index.js')
+
+block style 
+    style
+      include ../static/style.css
+      include  ../static/styleContact.css
+
+block content
+    div.container
+        h1 Contact Us
+    form(action="/contacy" , method = "post", class ="myForm") 
+        input(type="text" class = "myInput" ,
+        name ="Name", placeholder = "Enter your Name")
+        input(type="phone" class = "myInput" ,
+        name ="Mobile Number" placeholder = "Enter your Mobile no.")
+        input(type="email" class = "myInput" , placeholder = "Enter your email")
+        input(type="text" class = "myInput" , name
+        ="Address" , placeholder = "Address")
+        input(type="text" class = "myInput" , name = "Description" , placeholder = "Description")
+        button(class="btn")
+            | submit
+
+
